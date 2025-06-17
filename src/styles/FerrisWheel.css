@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Bartex-Regular';
+    src: url(/src/assets/Bartex-Regular.ttf) format('opentype');
+    font-weight: normal;
+}
+
+.ferris-wheel {
+    position: absolute;
+    display: flex;
+    width: 600px;
+    height: 650px;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.wheel {
+    position: relative;
+    margin: 7% auto;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 15px solid rgb(233, 134, 167);
+    box-shadow: 0 0 30px rgba(0,0,0,15%);
+    transform: center;
+    transform-origin: center center;
+    z-index: 1;
+}
+
+.base-circle {
+    position: absolute;
+    top: 39%;
+    left: 40%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(181, 88, 113);
+    background: radial-gradient(50% 50%, rgb(211, 124, 147) 20%, rgb(181, 88, 113));
+    border: 10px solid rgb(233, 134, 167);
+    box-shadow: 0 0 10px rgba(0,0,0,25%);
+    z-index: 1;
+}
+
+.stick {
+    position: absolute;
+    width: 10px;
+    height: 350px;
+    background-color: rgb(214, 129, 157);
+    box-shadow: 0 0 10px rgba(0,0,0,15%);
+    z-index: 0;
+}
+
+.stick.stick-1 {
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.stick.stick-2 {
+    top: 7px;
+    left: 50%;
+    height: 352px;
+    transform: rotate(60deg) translateX(-25%);
+}
+
+.stick.stick-3 {
+    top: 3px;
+    left: 48%;
+    height: 351px;
+    transform: rotate(120deg) translateX(-25%);
+}
+
+.name-plate {
+    position: absolute;
+    top: 19%;
+    left: 49%;
+    transform: rotate(-30deg) translate(-50%, -50%);
+    width: 350px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.name-plate h1 {
+    color: white;
+    font-family: "Bartex-Regular";
+    font-size: 65px;
+    color: white;
+    -webkit-text-stroke: 1px rgb(181, 88, 113);
+    font-style: italic;
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 0;
+    z-index: 1;
+}
+
+.cabin {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgb(181, 88, 113) 5%, rgb(211, 124, 147) 30%, rgb(181, 88, 113));
+    border-radius: 10% 10% 40% 40%;
+    border: 1px solid rgb(181, 88, 113);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 5%);
+    transform-origin: top;
+    z-index: 2;
+}
+
+.cabin-window {
+    position: absolute;
+    width: 27px;
+    height: 20px;
+    background: linear-gradient(90deg, var(--windowColor0), var(--windowColor1) 25%, var(--windowColor2));
+    border-radius: 4%;
+    border: 1px solid rgb(181, 88, 113);
+    box-shadow: 0 0 5px rgba(0,0,0,20%);
+    top: 10px;
+}
+
+.cabin-window.left {
+    left: 5px;
+}
+.cabin-window.right {
+    left: 37px;
+}
+
+.light-bulb {
+    position: absolute;
+    top: -55%;
+    left: -5%;
+    width: 75px;
+    height: 60px;
+    border-radius: 50%;
+    background: conic-gradient(from 45deg at center, 
+        transparent 30deg, 
+        var(--light) 60deg 90deg, 
+        transparent 120deg 150deg,
+        var(--light) 180deg 210deg, 
+        transparent 240deg 270deg,
+        var(--light) 300deg 330deg,
+        transparent 360deg),
+        radial-gradient(circle at 50% 50%, var(--light), transparent);
+}
+
+.cabin-1 {
+    position: absolute;
+    top: 0;
+    left: 40.5%;
+}
+
+.cabin-2 {
+    position: absolute;
+    top: 27%;
+    left: 85%;
+}
+
+.cabin-3 {
+    position: absolute;
+    top: 75%;
+    left: 84%;
+}
+
+.cabin-4 {
+    position: absolute;
+    top: 100%;
+    left: 40.5%;
+}
+
+.cabin-5 {
+    position: absolute;
+    top: 77%;
+    left: -2%;
+}
+
+.cabin-6 {
+    position: absolute;
+    top: 26%;
+    left: -4%;
+}
+
+.base {
+    position: absolute;
+    background-color: transparent;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 550px;
+}
+
+.base-leg {
+    position: absolute;
+    width: 40px;
+    height: 400px;
+    background-color: rgb(206, 119, 148);
+    box-shadow: 0 0 10px rgba(0,0,0,25%);
+}
+
+.base-leg.left {
+    border-radius: 150% 150% 60% 50%;
+    transform: rotate(18deg);
+    top: 15%;
+    left: 30%;
+}
+
+.base-leg.right {
+    border-radius: 150% 150% 50% 60%;
+    transform: rotate(-18deg);
+    top: 14%;
+    left: 60%;
+}

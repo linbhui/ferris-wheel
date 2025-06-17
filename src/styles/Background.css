@@ -1,0 +1,198 @@
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1);
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  z-index: -5;
+}
+
+.ground {
+    position: absolute;
+    bottom: -15%;
+    width: 140%;
+    height: 40%;
+    border-radius: 50% 50% 0% 0%;
+    background: linear-gradient(to top, var(--color3), var(--color4));
+    z-index: -1;
+}
+
+.sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,var(--color0) 10%, var(--color1) 50%, var(--color2));
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.sun {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 900px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, #decd72, #ebe0a9 3%, #f5f2e3 5%, transparent 50%);
+}
+
+.moon {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 900px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, #ffffff 3%, #fbf9f2 3%, #fefdf8 4%, transparent 35%);
+}
+
+.clouds-wrapper {
+    display: flex;
+    width: 200vw;
+    will-change: transform;
+    animation: cloud-move 70s linear infinite; 
+}
+
+.clouds {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: -100px;
+    width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.cloud {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    --g: radial-gradient(50% 50%, #994747 90%, #3f343400) no-repeat;
+    mask: var(--g) 80% 90%/30% 60%,
+        var(--g) 40% 0%/45% 90%,
+        var(--g) 0% 70%/40% 65%,
+        var(--g) 95% 80%/20% 35%,
+        var(--g) 55% 100%/90% 50%,
+        no-repeat;
+    background: white;
+}
+
+.big-cloud {
+    position: relative;
+    width: 120px;
+    height: 60px;
+}
+
+.middle-cloud {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+}
+
+.small-cloud {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+}
+
+.tiny-cloud {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+}
+
+.big-1 {
+    top: 60%;
+    left: -10%;
+}
+
+.big-2 {
+    top: 5%;
+    left: 25%;
+}
+.big-3 {
+    top: 30%;
+    left: 65%;
+}
+
+.middle-1 {
+    top: 50%;
+    left: 90%;
+}
+
+
+.middle-2 {
+    top: 40%;
+    left: 20%;
+}
+
+.middle-3 {
+    top: 25%;
+    left: 55%;
+}
+
+.small-1 {
+    top: 60%;
+    left: 45%;
+}
+
+.small-2 {
+    top: 20%;
+    left: 95%;
+}
+
+.small-3 {
+    top: 35%;
+    left: 75%;
+}
+
+.tiny-1 {
+    top: 25%;
+    left: 42%;
+}
+
+.tiny-2 {
+    top: 70%;
+    left: 82%;
+}
+
+.tiny-3 {
+    top: 35%;
+    left: 1%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .sun {
+        top: 30vh;
+        transform: scale(0.7);
+    }
+    .moon {
+        top: 30vh;
+        transform: scale(0.7);
+    }
+    .big-cloud, .middle-cloud, .small-cloud, .tiny-cloud {
+       transform: scale(0.6); 
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .big-cloud, .middle-cloud, .small-cloud, .tiny-cloud {
+       transform: scale(0.4); 
+    }
+}

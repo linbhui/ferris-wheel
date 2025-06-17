@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Bartex-Regular';
+    src: url(/src/assets/Bartex-Regular.ttf) format('opentype');
+    font-weight: normal;
+}
+
+.container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hello-text {
+    position: absolute;
+    height: 15%;
+    width: auto;
+    bottom: 0%;
+    left: 100%;
+    letter-spacing: 0.1em;
+    font-style: italic;
+    z-index: -1;
+    color: var(--aboutColor);
+}
+
+.scroll-char {
+    position: absolute;
+    text-align: center;
+    font-family: Bartex-Regular, Georgia;
+    font-size: 36px;
+    will-change: transform;
+    white-space: pre;
+    
+}
+
+.cabin-label {
+    position: absolute;
+    height: 50px;
+    width: auto;
+    text-align: center;
+    font-family: Arial;
+    font-weight: 600;
+    z-index: 5;
+    color: white;
+    letter-spacing: 0.07em;
+    word-spacing: 0.05em;
+}
+
+.label-1, .label-2, .label-3 {
+    margin-top: 38px;
+    font-size: 17px;
+}
+
+.label-5 {
+    margin-top: 37px;
+    font-size: 12px;
+    white-space: pre-line;
+}
+
+.label-4, .label-6 {
+    margin-top: 37px;
+    font-size: 15px;
+}
+
+.landing-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.dim-screen {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: rgba(0,0,0,0.7);
+    z-index: 10;
+    border: 0;
+    padding: none;
+    margin: 0;
+    top: -100px;
+    z-index: 0;
+}
+
+h1 {
+    position: absolute;
+    margin: auto auto;
+    color: white;
+    font-family: Bartex-Regular, Georgia;
+    font-size: 70px;
+    letter-spacing: 0.07em;
+    word-spacing: 0.01em;;
+    z-index: 1;
+}
