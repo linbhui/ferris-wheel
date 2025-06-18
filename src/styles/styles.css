@@ -22,7 +22,6 @@
     bottom: 0%;
     left: 100%;
     letter-spacing: 0.1em;
-    font-style: italic;
     z-index: -1;
     color: var(--aboutColor);
 }
@@ -34,6 +33,7 @@
     font-size: 36px;
     will-change: transform;
     white-space: pre;
+    font-style: italic;
     
 }
 
