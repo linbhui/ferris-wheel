@@ -29,6 +29,7 @@
 .scroll-char {
     position: absolute;
     text-align: center;
+    width: auto;
     font-family: Bartex-Regular, Georgia;
     font-size: 36px;
     will-change: transform;
