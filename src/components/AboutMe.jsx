@@ -27,7 +27,7 @@ function AboutMe({ notifyReady, reverse}) {
       const b = window.innerHeight * 0.2;
       const wordSpans = textRef.current.querySelectorAll(".scroll-char");
       wordSpans.forEach((word, i) => {
-        const width = word.offsetWidth + 10 || 25;
+        const width = word.offsetWidth || 25;
         const angle = (x / a) * Math.PI + 0.7;
         const y = -b * Math.sin(angle);
         word.style.transform = `translate(${x}px, ${y}px)`;
