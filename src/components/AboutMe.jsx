@@ -40,7 +40,7 @@ function AboutMe({ notifyReady, reverse}) {
     if (reverse?.current) {
       reverse.current = false;
 
-      targetPosition.current = window.innerWidth * 4;
+      targetPosition.current = window.innerWidth * 3.5;
       position.current = targetPosition.current;
 
       
